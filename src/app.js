@@ -6,6 +6,7 @@ const InstrumentInfoView = require('./views/instrument_info_view.js')
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
   const selectElement = document.querySelector('#instrument-families')
   const selectView = new SelectView(selectElement);
   selectView.bindEvents()
@@ -16,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   instrumentInfoDisplay.bindEvents()
 
 
-  const instrumentDataSource = new InstrumentFamilies();
+  const instrumentDataSource = new InstrumentFamilies(data);
   instrumentDataSource.bindEvents()
-
 });
